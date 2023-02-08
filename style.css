@@ -384,7 +384,7 @@
 }
 @media (max-width: 1200px) {											/* resolution <1200 (footer) */
 	.nav-footer {
-		min-width: 242px;
+		min-width: 424px;
     flex-direction: column;
   }
   .button-next {
