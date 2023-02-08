@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="./style.css">
+	<link rel="icon" type="image/x-icon" href="./img/favicon.ico">
+	<title>Exam Project</title>
+</head>
+
+<body class="body">
+	<header class="header">
+		<nav class="nav">
+			<a href="#" class = "link logo"><img src="./img/logo.svg" alt="Logo" width="87" height="64"></a>
+			<a href="#" class="link">GIFs</a>
+			<a href="#" class="link">Photos</a>
+		</nav>
+	</header>
+
+	<main class="main">
+		<!-- СТРОКА ПОИСКА -->
+		<section class="hero">
+			<h1 class="hero-header">Search for images and GIFs</h1>
+			<h2 class="hero-subheader">Search for images and GIFs</h2>
+			<!-- блок поиска --> 
+			<form action="#" method="#" class="form">
+				<div class="select-wrapper">
+					<select class="select">
+						<option value="gifs">GIFs</option>
+						<option value="photos">Photos</option>
+					</select>
+				</div>
+				<input type="text" placeholder="Search..." class="search">
+				<button class="search-button"></button>
+			</form>
+		</section>
+		<!-- КАРТОЧКИ И ИКОНКИ -->
+		<section class="card-section">
+			<!-- LATEST | POPULAR -->
+			<div class="switcher">
+				<div class="switch">Latest</div>
+				<div class="divider"></div>
+				<div class="switch">Popular</div>
+			</div>
+			<!-- КАРТОЧКИ -->
+			<div class="card-wrapper">
+				<article class="card">
+					<div class="image-wrapper">
+						<img src="./img/card_1.svg" alt="Monkey on a skeytboard." width="172" height="215">
+					</div>
+					<div class="text-wrapper">
+						<h1 class="card-header">Chotte Ustaad</h1>
+						<p class="card-text">This vector is available in .EPS and .PSD formats.</p>
+						<a href="#" class="card-link">
+							<span>Download</span>
+							<img src="./img/download_icon.svg" alt="" width="23" height="24">
+						</a>
+					</div>
+				</article>
+				<article class="card">
+					<div class="image-wrapper">
+						<img src="./img/card_2.svg" alt="Vampire-cat fighter with a cloak." width="187" height="214">
+					</div>
+					<div class="text-wrapper">
+						<h1 class="card-header">Rowdy Billa</h1>
+						<p class="card-text">This vector is available in .EPS and .PSD formats.</p>
+						<a href="#" class="card-link">
+							<span>Download</span>
+							<img src="./img/download_icon.svg" alt="" width="23" height="24">
+						</a>
+					</div>
+				</article>
+				<article class="card">
+					<div class="image-wrapper">
+						<img src="./img/card_3.svg" alt="A little elephant drinks soda." width="188" height="215">
+					</div>
+					<div class="text-wrapper">
+						<h1 class="card-header">Humpty Dumpty</h1>
+						<p class="card-text">This vector is available in .EPS and .PSD formats.</p>
+						<a href="#" class="card-link">
+							<span>Download</span>
+							<img src="./img/download_icon.svg" alt="" width="23" height="24">
+						</a>
+					</div>
+				</article>
+			</div>
+		</section>
+	</main>
+
+	<footer class="footer">
+		<nav class="nav-footer">
+			<button class="button-next">Next page</button>
+			<div class="nav-block-wrapper">
+				<span>page</span>
+				<div class="nav-buttons-wrapper">
+					<button class="nav-button previous_page-button"></button>
+					<!-- а почему мы используем кнопку, а не форму, там где показывается номер страницы? -->
+					<button class="nav-button indicator-button">1</button>
+					<button class="nav-button next_page-button"></button>
+				</div>
+				<span>of 120</span>
+			</div>
+		</nav>
+	</footer>
+</body>

@@ -1,0 +1,396 @@
+/*RESET STYLES*/
+ * {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+}
+/*COMMON STYLES*/
+@font-face{
+  font-family: Poppins;
+  src: url(./fonts/Poppins-Regular.ttf) format("truetype");
+}
+.body{
+	background: #161819;
+}
+/* тк шрифт (font-family) везде один и тот же, можно ли указать его где-то в одном месте?  Или курсор, к примеру?*/
+
+
+/*HEADER*/
+.header {
+	max-width: 1380px;
+	margin: 50px auto;
+}
+.nav {
+	display: flex;
+	width: 300px;
+	align-items: center;
+  justify-content: space-between;
+}
+.logo {
+	width: 87px;
+	height: 64px;
+}
+.link {
+	font-family: 'Poppins';
+	font-size: 20px;
+	line-height: 30px;
+	letter-spacing: 0.1em;
+	color: #fff;
+}
+.link:hover {
+	text-decoration: underline;
+}
+@media (max-width: 1200px) {									/*dimensions <1200 (for header)*/
+	.header {
+		margin: 50px 20px;
+	}
+}
+
+/*																						MAIN*/
+/*																						СТРОКА ПОИСКА*/
+.hero {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 40px auto 74px;
+}
+.hero h1 {
+	font-family: 'Poppins';
+	font-style: normal;
+	font-size: 48px;
+	letter-spacing: 0.1em;
+	text-align: center;
+	color: #FFFFFF;
+}
+.hero h2 {
+	font-family: 'Poppins';
+	font-style: normal;
+	font-size: 20px;
+	letter-spacing: 0.1em;
+	text-align: center;
+	margin: 20px 0 40px;
+	color: rgba(255, 255, 255, 0.5);
+}
+/* 																						форма поиска */
+.form {
+	width: 810px;
+	height: 64px;
+	background: #252728;
+	border-radius: 10px;
+	padding: 7px 32px 7px 20px;
+	display: flex;
+		justify-content: space-between;
+		align-items: center;
+}
+.select-wrapper {
+	position: relative;
+}
+.select {
+	width: 108px;
+	height: 50px;
+	padding: 0 13px;
+	border-radius: 10px;
+  appearance: none;
+	background: linear-gradient(99.59deg, #F473A3 3.39%, #FE5661 97.89%);
+	font-family: 'Poppins';
+	font-style: normal;
+	font-size: 16px;
+	line-height: 24px;
+	text-align: left;
+	color: #fff;
+	order: 0;
+	cursor: pointer;
+	position: relative;
+}
+.select-wrapper::after {
+	  content: url('./img/select_triangle.svg');
+		width: 15px;
+		height: 8px;
+		position: absolute;
+    right: 10px;
+    top: 15px;
+}
+.search {
+	background: none;
+	font-family: 'Poppins';
+	font-style: normal;
+	font-size: 22px;
+	letter-spacing: 0.05em;
+	color: rgba(255, 255, 255, 0.25);
+	border: none;
+	order: 1;
+	margin: 0 29px 0;
+	width: calc(100% - 196px);
+}
+.search-button {
+		background: url("./img/lens.svg") no-repeat center;
+		border: none;
+		width: 30px;
+		height: 30px;
+		cursor: pointer;
+		order: 2;
+}
+@media (max-width: 992px) {									/*dimensions <992 (для формы поиска)*/
+	.form {
+		width: 424px; 
+	}
+}
+/*																						КАРТОЧКИ И ИКОНКИ*/
+.card-section {
+	min-width: 1300px;
+	max-width: 1380px;
+	margin: 0 auto;	
+	display: flex;
+		flex-direction: column;
+}
+@media (max-width: 1200px) {									/*dimensions <1200 (отступ для card-seciton)*/
+	.card-section {
+		align-items: center;
+	}
+}
+/* 																						latest / popular */
+.switcher {
+	width: 263px;
+	height: 36px;
+	display: flex;
+		justify-content: space-between;
+		align-items: center;
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 24px;
+	letter-spacing: 0.1em;
+	color: #fff;
+}
+.divider {
+	width: 20px;
+	height: 0px;
+	border: 2px solid rgba(255, 255, 255, 0.25);
+	transform: rotate(90deg);
+}
+.switch {
+	position: relative;
+}
+.switch:hover{
+	cursor: pointer;
+}
+.switch:hover:after {
+	  content: url('./img/circle.svg');
+		width: 9px;
+		height: 9px;
+		position: absolute;
+    top: -15px;
+    right: -7px;
+}
+/* 																						cards-block */
+.card-wrapper {
+	margin: 40px 0;
+	display: flex;
+    justify-content: space-between;
+}
+.card {
+	background: #1F2123;
+	width: 424px;
+	height: 498px;
+	border-radius: 24px;
+	display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+}
+.image-wrapper {
+	width: 376px;
+	height: 280px;
+	margin: 25px;
+	background: #393A3E;
+	border-radius: 24px;
+	display: flex;
+		justify-content: center;
+    align-items: center;
+}
+.text-wrapper {
+  display: flex;
+   	flex-direction: column;
+    align-items: center;
+}
+.text-wrapper h1 {
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 32px;
+	text-align: center;
+	letter-spacing: 0.05em;
+	color: #fff;
+}
+.card-text {
+	margin: 6px 100px 15px;
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	text-align: center;
+	letter-spacing: 0.05em;
+	color: #fff;
+	opacity: 0.6;
+}
+.card-link {
+	width: 166px;
+	height: 36px;
+	display: flex;
+		justify-content: space-between;
+		align-items: center;
+}
+.card-link span {
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 24px;
+	text-align: center;
+	letter-spacing: 0.05em;
+	text-decoration-line: underline;
+	color: #fff;
+	opacity: 0.5;
+}
+.card-link:hover {
+	cursor: pointer;
+}
+.div-wrapper {
+	width: 400px;
+	height: 200px;
+	display: flex;
+}
+.div1 {
+	width: 100px;
+	height: 100px;
+	border: dashed rgba(211, 220, 50, .6);
+	background: #393A3E;
+	order: 0;
+}
+.div2 {
+	width: 100px;
+	height: 100px;
+	border: dashed rgba(211, 220, 50, .6);
+	background: #393A3E;
+	order: 1;
+	flex-grow: 1;
+}
+@media (max-width: 1200px) {									/*dimensions <1200 (for cards)*/
+	.card-section {
+		min-width: 424px;
+	}
+	.card-wrapper {
+		height: 1546px;
+		flex-direction: column;
+			align-items: center;
+}
+	}
+}
+
+
+/*																						FOOTER*/
+/*	??? почему-то при удалении пустого селектора .footer, браузеры перестают видить displey:flex у .nav-footer. Загадка... */
+.footer {}
+.nav-footer {
+	min-width: 1300px;
+	max-width: 1380px;
+	margin: 70px auto 75px;
+	display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.button-next {
+	height: 75px;
+	width: 240px;
+	padding: 20px 24px;
+	margin-left: calc(50% - 121px);
+	display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
+	background: url("./img/arrow.svg") no-repeat center right 24px #252728;
+	border-radius: 10px;
+	border: none;
+	font-family: 'Poppins';
+	font-size: 24px;
+	line-height: 36px;
+	letter-spacing: 0.1em;
+	color: #fff;
+			cursor: pointer;
+}
+.button-next:hover {
+	background-color: #3a3a3a;
+}
+/* 																					 блок кнопок навигации */
+.nav-block-wrapper {
+	display: flex;
+		align-items: center;
+}
+.nav-block-wrapper span {
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 27px;
+	text-align: center;
+	letter-spacing: 0.05em;
+	color: #fff;
+	opacity: 0.25;
+	cursor: default;
+}
+.nav-buttons-wrapper{
+	margin: 0 10px;
+	display: flex;
+}
+.nav-button {
+	width: 34px;
+	height: 34px;
+	border-radius: 6px;
+	margin: 0 2px;
+	border-radius: 10px;
+	border: none;
+	font-family: 'Poppins';
+	cursor: pointer;
+}
+.indicator-button {
+	background: #393A3E;
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 30px;
+	text-align: center;
+	letter-spacing: 0.05em;
+	color: #fff;
+	opacity: 0.8;
+	сursor: pointer;
+}
+.indicator-button:hover {
+	background-color: #4e4e4e;
+}
+.previous_page-button {
+	background: url("./img/previous_page.svg") no-repeat center #1F2123;
+	cursor: pointer;
+}
+.previous_page-button:hover {
+	background-color: #252728;
+}
+.next_page-button {
+	background: url("./img/next_page.svg") no-repeat center #1F2123;
+	cursor: pointer;
+}
+.next_page-button:hover {
+	background-color: #252728;
+}
+@media (max-width: 1200px) {											/* resolution <1200 (footer) */
+	.nav-footer {
+		min-width: 242px;
+    flex-direction: column;
+  }
+  .button-next {
+  	margin: 0 0 15px 0;
+  }
+}
+
+
+
